@@ -1,1 +1,0 @@
-/home/hb/Documents/programming/aed/bst/target/debug/bst: /home/hb/Documents/programming/aed/bst/src/binary_search_tree.rs /home/hb/Documents/programming/aed/bst/src/lib.rs /home/hb/Documents/programming/aed/bst/src/main.rs
