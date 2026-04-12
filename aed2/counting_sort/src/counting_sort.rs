@@ -6,7 +6,7 @@ pub trait CountingSortable {
 //  Ord: Elementos podem ser ordenados fortemente (não inclui floating point)
 //  Copy: Elementos não contém ponteiros para o Heap (não precisa de deep copy)
 //  Into<usize> Elementos podem ser convertidos para usize 
-impl<T> CountingSortable for &mut [T] 
+impl<T> CountingSortable for [T] 
 where T: Ord + Copy + TryInto<usize> + TryFrom<usize>
 {
     fn counting_sort(&mut self) {
@@ -52,7 +52,7 @@ where T: Ord + Copy + TryInto<usize> + TryFrom<usize>
             result[indice] = self[i];
         }
 
-        self.copy_from_slice(&result);
+        self.swap_with_slice(&mut result);  //  Clean pointer swap
     }
 }
 

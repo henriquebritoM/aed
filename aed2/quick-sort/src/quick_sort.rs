@@ -1,4 +1,4 @@
-use std::{usize};
+use std::usize;
 
 
 pub trait QuickSortable {
@@ -26,13 +26,13 @@ where T: Ord + Copy
 fn qsort_recursive<T> (slice: &mut [T], start: usize, end: usize) 
 where T: Ord + Copy
 {
-    if start >= end {
+    if start >= end || end > slice.len() {
         return;
     }
 
     let pi = partition(slice, start, end);
 
-    if pi > 0 {qsort_recursive(slice, start, pi - 1);}
+    qsort_recursive(slice, start, usize::wrapping_sub(pi, 1));
     qsort_recursive(slice, pi + 1, end);
 }
 
