@@ -1,6 +1,21 @@
 #![allow(dead_code)]
 #![allow(unused)]
 
+/*
+ *  The code here is beyond the touch of the creator.
+ *
+ *  The limited numbers of hours I could design to
+ *  this project were not enough to fully adapt it
+ *  to rust semantics and logic.
+ *
+ *  The result is this abomination, a pointer hell,
+ *  tainted by the ugliests parts of rust and cpp,
+ *  from where I copyed more logic than would be
+ *  acceptable.
+ *
+ *  "abandon hope, all ye who enter here"
+ */
+
 use std::{
     cell::Cell,
     cmp::max,
